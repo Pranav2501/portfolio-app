@@ -1,25 +1,36 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import Navbar from './components/layout/Navbar';
+import Footer from './components/layout/Footer';
+import Home from './components/sections/Home';
+import About from './components/sections/About';
+import Experience from './components/sections/Experience';
+import Projects from './components/sections/Projects';
+import Skills from './components/sections/Skills';
+import Education from './components/sections/Education';
+import Contact from './components/sections/Contact';
 
-function App() {
+const App: React.FC = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="flex flex-col min-h-screen bg-primary">
+        <Navbar />
+        <main className="flex-grow">
+          <Switch>
+            <Route path="/" exact>
+              <Home />
+              <About />
+              <Skills />
+              <Experience />
+              <Education />
+              <Projects />
+              <Contact />
+            </Route>
+          </Switch>
+        </main>
+        <Footer />
+      </div>
+    </Router>
   );
 }
 
