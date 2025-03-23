@@ -8,6 +8,11 @@ import {
 } from 'react-icons/fa';
 import { SiTypescript, SiRedux, SiTailwindcss, SiFlutter, SiMongodb, SiPostgresql, SiFirebase } from 'react-icons/si';
 import { renderIcon } from '../../utils/iconUtils';
+import { FaGitAlt } from "react-icons/fa";
+import { SiTableau } from "react-icons/si";
+import { SiSpring } from "react-icons/si";
+
+
 
 interface SkillCardProps {
   title: string;
@@ -62,14 +67,17 @@ const Skills: React.FC = () => {
     { name: 'PostgreSQL', icon: SiPostgresql },
     { name: 'Firebase', icon: SiFirebase },
     { name: 'AWS', icon: FaAws },
-    { name: 'Docker', icon: FaDocker }
+    { name: 'Docker', icon: FaDocker },
+    { name: 'Git', icon: FaGitAlt },
+    { name: 'Tableau', icon: SiTableau },
+    { name: 'Spring', icon: SiSpring }
   ];
 
   const skillCategories: { icon: IconType; title: string; skills: string[]; delay: number }[] = [
     {
       icon: FaCode,
       title: "Programming Languages",
-      skills: ["Python", "Java", "C/C++", "JavaScript", "Swift", "R"],
+      skills: ["Python", "Java", "C/C++", "JavaScript", "Swift", "R", "SQL"],
       delay: 0.1
     },
     {
@@ -87,13 +95,13 @@ const Skills: React.FC = () => {
     {
       icon: FaCloud,
       title: "Cloud & DevOps",
-      skills: ["AWS", "Azure", "Firebase", "GCP", "Docker", "Kubernetes"],
+      skills: ["AWS", "Azure", "Firebase", "GCP", "Docker", "Kubernetes", "Git", "CI/CD"],
       delay: 0.4
     },
     {
       icon: FaChartLine,
       title: "Data & ML Tools",
-      skills: ["TensorFlow", "PyTorch", "Pandas", "NumPy", "D3.js", "Apache Spark"],
+      skills: ["TensorFlow", "PyTorch", "Pandas", "NumPy", "D3.js", "Apache Spark", "Tableau"],
       delay: 0.5
     }
   ];
