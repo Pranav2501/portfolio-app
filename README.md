@@ -30,7 +30,13 @@ A modern, responsive portfolio website built with React, TypeScript, and Tailwin
    npm install
    ```
 
-3. Start the development server
+3. Set up environment variables
+   ```bash
+   cp .env.example .env
+   ```
+   Edit the `.env` file with your personal credentials.
+
+4. Start the development server
    ```bash
    npm start
    ```
@@ -42,6 +48,18 @@ A modern, responsive portfolio website built with React, TypeScript, and Tailwin
 npm run build
 ```
 
+## Environment Variables
+
+The project uses environment variables to store sensitive data. An `.env.example` file is provided as a template.
+
+- `REACT_APP_EMAILJS_SERVICE_ID`: Your EmailJS service ID
+- `REACT_APP_EMAILJS_TEMPLATE_ID`: Your EmailJS template ID
+- `REACT_APP_EMAILJS_USER_ID`: Your EmailJS user ID (API Key)
+- `REACT_APP_WEBSITE_NAME`: The name of your website
+- `REACT_APP_WEBSITE_URL`: The URL where your website is hosted
+- `REACT_APP_LINKEDIN_URL`: Your LinkedIn profile URL
+- `REACT_APP_GITHUB_URL`: Your GitHub profile URL
+
 ## Setup EmailJS for Contact Form
 
 To enable email functionality in the contact form:
@@ -50,13 +68,7 @@ To enable email functionality in the contact form:
 2. Set up an email service (Gmail, Outlook, etc.)
 3. Create an email template with parameters: `name`, `email`, `subject`, `message`
 4. Get your Service ID, Template ID, and User ID
-5. Update the Contact component with your IDs:
-   ```typescript
-   // In Contact.tsx
-   const serviceId = 'your_service_id';
-   const templateId = 'your_template_id';
-   const userId = 'your_user_id';
-   ```
+5. Add these values to your `.env` file
 6. Test your form by submitting a message
 
 ## Deployment
