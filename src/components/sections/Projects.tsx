@@ -114,28 +114,28 @@ const Projects: React.FC = () => {
       title: "Lockbox - Password Manager App",
       description: "Developed a secure password management app using Swift and Firebase, integrating geo-tracking via Apple Maps Kit to monitor password usage locations, enhancing security insights for users.",
       technologies: ["Swift", "Firebase", "Apple Maps Kit", "Encryption"],
-      github: "https://github.com/Pranav2501",
+      github: "https://github.com/agnibha-chatterjee/lockbox",
       type: "mobile"
     },
     {
       title: "Kanbas - Learning Management System",
       description: "Developed a fully functional learning management system called Kanbas using React, Node.js and MongoDB, incorporating authentication, role-based access control and dynamic course association.",
       technologies: ["React", "Node.js", "MongoDB", "Redux"],
-      github: "https://github.com/Pranav2501",
+      github: "https://project--kanbas-react-web-app-pv.netlify.app/#/Kanbas/Account/Signup",
       type: "web"
     },
     {
       title: "Traffic Management System",
       description: "Implemented vehicle detection using YOLOv4 and YOLOv8, achieving up to 98% accuracy in identifying vehicles, significantly enhancing the efficiency of real-time traffic management systems.",
       technologies: ["Python", "YOLOv4", "YOLOv8", "Computer Vision"],
-      github: "https://github.com/Pranav2501",
+      github: "https://github.com/Pranav2501/vehicle-detection",
       type: "ml"
     },
     {
       title: "Stock Market Prediction & Analysis",
       description: "Created a machine learning-based stock market prediction system utilizing LSTM neural networks, achieving 94.6% accuracy in forecasting price movements over a six-month period.",
       technologies: ["Python", "LSTM", "TensorFlow", "Data Analysis"],
-      github: "https://github.com/Pranav2501",
+      github: "https://github.com/Pranav2501/Stock-Price-Prediction-System",
       type: "data"
     }
   ];
