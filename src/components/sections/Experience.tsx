@@ -69,9 +69,9 @@ const Experience: React.FC = () => {
       location: "Oakland, CA",
       period: "Sep 2024 - Present",
       responsibilities: [
-        "Support the professor in running usability experiments to assess the effectiveness of students' visualizations in real-world data analysis scenarios.",
-        "Evaluate assignments on creating interactive web-based visualizations and provide feedback to improve design efficiency based on best practices.",
-        "Conduct weekly office hours to assist graduate students with data visualization concepts & tools like D3.js and Vega-Lite."
+        "Supported the professor in running usability experiments to assess the effectiveness of students' visualizations in real-world data analysis scenarios.",
+        "Evaluated assignments on creating interactive web-based visualizations and provide feedback to improve design efficiency based on best practices.",
+        "Conducted weekly office hours to assist graduate students with data visualization concepts & tools like D3.js and Vega-Lite."
       ]
     },
     {

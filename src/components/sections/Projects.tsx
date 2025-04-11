@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { FaGithub, FaLink, FaCode, FaMobile, FaServer, FaChartArea } from 'react-icons/fa';
+import { FaGithub, FaLink, FaCode, FaMobile, FaServer, FaChartArea, FaDatabase } from 'react-icons/fa';
 import { renderIcon } from '../../utils/iconUtils';
 
 interface ProjectProps {
@@ -10,7 +10,7 @@ interface ProjectProps {
   image?: string;
   github?: string;
   demo?: string;
-  type: 'web' | 'mobile' | 'ml' | 'data';
+  type: 'web' | 'mobile' | 'ml' | 'data' | 'systems';
 }
 
 const ProjectCard: React.FC<ProjectProps> = ({
@@ -30,6 +30,7 @@ const ProjectCard: React.FC<ProjectProps> = ({
       case 'mobile': return renderIcon(FaMobile, { className: "text-secondary", size: 20 });
       case 'ml': return renderIcon(FaServer, { className: "text-secondary", size: 20 });
       case 'data': return renderIcon(FaChartArea, { className: "text-secondary", size: 20 });
+      case 'systems': return renderIcon(FaDatabase, { className: "text-secondary", size: 20 });
       default: return renderIcon(FaCode, { className: "text-secondary", size: 20 });
     }
   };
@@ -111,6 +112,22 @@ const ProjectCard: React.FC<ProjectProps> = ({
 const Projects: React.FC = () => {
   const projects: ProjectProps[] = [
     {
+      title: "Reddish - Key : Value Database with CLI",
+      description:
+        "Built a custom in-memory key-value store with support for strings, lists, sets, and hashes. Implemented features like key expiration, pub/sub messaging, and snapshot-based persistence with a CLI client in TypeScript.",
+      technologies: ["Node.js", "TypeScript", "RESP Protocol", "Systems Programming"],
+      github: "https://github.com/Pranav2501/reddish", 
+      type: "systems"
+    },
+    {
+      title: "SocketShare - Cloud File Sharing App",
+      description:
+      "Built a file-sharing platform using React, Flask, and AWS S3 with secure uploads, file search, and download support. Implemented pre-signed URLs, CORS protection, and frontend search with debounce logic.",
+      technologies: ["React", "Flask", "AWS S3", "Bootstrap", "Python", "CORS"],
+      github: "https://socketshare-client.onrender.com",
+      type: "web"
+    },
+    {
       title: "Lockbox - Password Manager App",
       description: "Developed a secure password management app using Swift and Firebase, integrating geo-tracking via Apple Maps Kit to monitor password usage locations, enhancing security insights for users.",
       technologies: ["Swift", "Firebase", "Apple Maps Kit", "Encryption"],
@@ -125,10 +142,11 @@ const Projects: React.FC = () => {
       type: "web"
     },
     {
-      title: "Traffic Management System",
-      description: "Implemented vehicle detection using YOLOv4 and YOLOv8, achieving up to 98% accuracy in identifying vehicles, significantly enhancing the efficiency of real-time traffic management systems.",
-      technologies: ["Python", "YOLOv4", "YOLOv8", "Computer Vision"],
-      github: "https://github.com/Pranav2501/vehicle-detection",
+      title: "Vehicle Detection for Autonomous Systems",
+      description:
+        "Built a real-time vehicle detection and tracking system using YOLOv4 and YOLOv8 on COCO datasets with sub-30ms inference times. Integrated Dlib tracking for short-term object continuity in autonomous traffic simulations.",
+      technologies: ["Python", "YOLOv4", "YOLOv8", "OpenCV", "Dlib"],
+      github: "https://github.com/Pranav2501/vehicle-detection", 
       type: "ml"
     },
     {
